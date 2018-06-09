@@ -1,0 +1,14 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+{% if not is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+    {{ include('@FOSUser/Security/login.html.twig') }}
+{% else %}
+        {% include "HomeContent/content.html.twig" %}
+{% endif %}
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+{% endblock %}
+
