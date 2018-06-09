@@ -22,9 +22,7 @@ class RegistrationType extends AbstractType
     public function getParent(){
         return 'FOS\UserBundle\Form\Type\RegistrationFormType';
     }
-
-
-
+    
     public function getName(){
         return 'user_registration';
     }
